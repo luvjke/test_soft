@@ -1,0 +1,74 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins/reset.scss';
+@import '../../../scss/mixins/utils.scss';
+@import '../../../scss/mixins/text.scss';
+
+.button {
+  @include reset-button();
+  @include focus();
+  position: relative;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    background-color: $black-theme;
+  }
+}
+
+.icon {
+  @include vertical-center();
+  left: 16px;
+}
+
+.icon_button {
+  padding-left: 35px;
+}
+
+.filled {
+  background-color: $sub-gray;
+  color: $main-white;
+}
+
+.outline {
+  background-color: $sub-gray;
+  border: none;
+  padding: 10px 5px;
+}
+
+.custom {
+  background-color: $sub-gray;
+  border: $search-border;
+  border-radius: 0;
+  padding: 13px 25px;
+  transition: background-color 200ms ease;
+  border-radius: 0 6px 6px 0;
+}
+
+.pagination {
+  background-color: $black-theme;
+  border: $search-border;
+  max-width: 990px;
+  padding: 13px 25px;
+  width: 100%;
+
+  &:hover {
+    background-color: $black-header;
+  }
+}
+
+.advanced {
+  background-color: $black-theme;
+  border: $search-border;
+  border-radius: 2px;
+  padding: 13px 25px;
+
+  &:hover {
+    background-color: $black-header;
+  }
+}
+
+.label {
+  @include textSemibold-16();
+}
