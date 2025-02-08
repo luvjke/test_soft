@@ -16,12 +16,8 @@ export const SearchBar = ({ onSetSearch }: SearchBarProps) => {
     setInputValue(event.target.value);
   };
 
-  const handleFocus = () => {
-    setInputValue(''); // Clear input on focus
-  };
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
     onSetSearch({ search: inputValue });
   };
 
@@ -34,7 +30,6 @@ export const SearchBar = ({ onSetSearch }: SearchBarProps) => {
             placeholder={'Type to search...'}
             version={'custom'}
             value={inputValue}
-            onFocus={handleFocus}
           />
         </div>
         <Button version={'custom'} label={'Search'} icon={<SearchIcon />} />

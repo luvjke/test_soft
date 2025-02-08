@@ -3,13 +3,12 @@ import React from 'react';
 import styles from './MovieBlock.module.scss';
 import { MovieBlockProps } from './MovieBlock.props';
 import { MovieBlockItem } from '../MovieBlockItem';
-export const MovieBlock = ({ movies }: MovieBlockProps) => {
+export const MovieBlock = ({ movies, searchTerm }: MovieBlockProps) => {
   return (
     <div className={styles.container}>
+      {searchTerm && <div>Search result : {searchTerm}</div>}
       <div className={styles.block}>
-        {movies.map((movie) => (
-          <MovieBlockItem key={movie.imdbID} movie={movie} />
-        ))}
+        {movies && movies.map((movie) => <MovieBlockItem key={movie.imdbID} movie={movie} />)}
       </div>
     </div>
   );

@@ -13,12 +13,14 @@ export const Button = ({
   version,
   tag = 'button',
   href,
+  active,
   state,
 }: ButtonProps) => {
   const buttonClassNames = classNames(
     styles.button,
     version && styles[version],
-    icon && styles.icon_button
+    icon && styles.icon_button,
+    active && styles.active
   );
   return tag === 'button' ? (
     <button className={buttonClassNames} onClick={onClick} disabled={disabled}>
