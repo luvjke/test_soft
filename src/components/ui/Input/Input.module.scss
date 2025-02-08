@@ -3,36 +3,36 @@
 @import '../../../scss/mixins/utils.scss';
 @import '../../../scss/mixins/text.scss';
 
-.button {
-  @include reset-button();
+.input {
+  @include reset-input();
   @include focus();
-  position: relative;
+  @include textRegular-16();
+  background-color: rgb(67, 66, 66);
+  color: rgb(255, 255, 255);
 
   &:disabled {
     pointer-events: none;
   }
 
+  &:focus {
+    background-color: $hover-form;
+  }
+
   &:hover {
     background-color: $hover-form;
   }
+
+  // &::placeholder {
+  // }
 }
 
 .icon {
   @include vertical-center();
-  left: 0;
-}
-
-.icon_button {
-  padding-left: 35px;
+  left: 15px;
 }
 
 .custom{
-  background-color: $block-background;
   border-radius: 10px;
   padding: 15px;
-}
-
-.label {
-  @include textRegular-14();
-  margin-left: 5px;
+  width: 100%;
 }

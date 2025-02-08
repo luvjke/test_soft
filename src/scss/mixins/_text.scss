@@ -5,6 +5,13 @@
   font-style: normal;
   line-height: normal;
 }
+
+@mixin textRegular-12 {
+  @include basic-text();
+  font-size: 12px;
+  font-weight: $font-weight-regular;
+}
+
 @mixin textRegular-14 {
   @include basic-text();
   font-size: 14px;
