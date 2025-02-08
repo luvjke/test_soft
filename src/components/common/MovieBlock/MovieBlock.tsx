@@ -1,13 +1,15 @@
 import React from 'react';
 
 import styles from './MovieBlock.module.scss';
-export const MovieBlock = () => {
+import { MovieBlockProps } from './MovieBlock.props';
+import { MovieBlockItem } from '../MovieBlockItem';
+export const MovieBlock = ({ movies }: MovieBlockProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.block}>
-        {/* {data.map((item) => (
-          <div>{item}</div>
-        ))} */}
+        {movies.map((movie) => (
+          <MovieBlockItem key={movie.imdbID} movie={movie} />
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,1 @@
+export { MovieBlockItem } from './MovieBlockItem';

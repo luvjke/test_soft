@@ -1,0 +1,30 @@
+@import '../../../scss/mixins//text.scss';
+
+.item_box{
+    background-color: red;
+    overflow: hidden;
+    position: relative;
+   
+
+    .image{
+        aspect-ratio: 4/6;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .content_box{
+        .title{
+            margin: 10px 16px 16px;
+            @include textRegular-14();
+        }
+    
+        .content{
+            padding: 10px 16px;
+    
+            @media (min-width: 768px) {
+                padding: 5px 0;
+              }
+        }
+    }
+
+}
