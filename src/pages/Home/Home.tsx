@@ -3,6 +3,7 @@ import { MovieBlock } from 'src/components/common/MovieBlock';
 import { SearchBar } from 'src/components/common/SearchBar/SearchBar';
 import { useAppDispatch, useAppSelector } from 'src/redux/hooks';
 import { fetchMoviesAsync } from 'src/redux/movieSlice/asyncAction';
+import { updateSearchTitle } from 'src/redux/movieSlice/movieSlice';
 
 export const Home = () => {
   const dispatch = useAppDispatch();
@@ -20,10 +21,12 @@ export const Home = () => {
   if (status === 'failed') {
     return <div>Failed to load</div>;
   }
-
+  const handleUpdateSearch = (value: { search: string }) => {
+    dispatch(updateSearchTitle(value.search));
+  };
   return (
     <>
-      <SearchBar />
+      <SearchBar onSetSearch={handleUpdateSearch} />
       <MovieBlock movies={movies} />
     </>
   );

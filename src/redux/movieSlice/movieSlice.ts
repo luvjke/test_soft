@@ -5,7 +5,7 @@ import { fetchMoviesAsync } from './asyncAction';
 
 const initialState: MovieState = {
   movies: [],
-  searchTerm: 'Bleach',
+  searchTerm: 'Star Wars',
   status: 'completed',
   totalResults: 0,
 };
@@ -13,7 +13,11 @@ const initialState: MovieState = {
 const movieSlice = createSlice({
   name: 'movieSlice',
   initialState,
-  reducers: {},
+  reducers: {
+    updateSearchTitle: (state, action) => {
+      state.searchTerm = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMoviesAsync.pending, (state) => {
@@ -31,6 +35,6 @@ const movieSlice = createSlice({
   },
 });
 
-export const {} = movieSlice.actions;
+export const { updateSearchTitle } = movieSlice.actions;
 
 export default movieSlice.reducer;
