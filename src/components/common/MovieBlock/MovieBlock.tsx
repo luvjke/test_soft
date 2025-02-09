@@ -6,7 +6,7 @@ import { MovieBlockItem } from '../MovieBlockItem';
 export const MovieBlock = ({ movies, searchTerm }: MovieBlockProps) => {
   return (
     <div className={styles.container}>
-      {searchTerm && <div>Search result : {searchTerm}</div>}
+      {searchTerm && <div className={styles.result}>Search result : {searchTerm}</div>}
       <div className={styles.block}>
         {movies && movies.map((movie) => <MovieBlockItem key={movie.imdbID} movie={movie} />)}
       </div>

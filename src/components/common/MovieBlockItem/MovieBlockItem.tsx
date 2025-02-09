@@ -25,7 +25,7 @@ export const MovieBlockItem = ({ movie }: MovieItem) => {
 
   React.useEffect(() => {
     const json = JSON.stringify(favoriteMovie);
-    localStorage.setItem('favorite', json);
+    localStorage.setItem('favoriteMoviesTest', json);
   }, [favoriteMovie]);
 
   return (
