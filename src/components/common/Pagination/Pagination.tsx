@@ -7,7 +7,7 @@ import { PaginationProps } from './Pagination.props';
 export const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) => {
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
-    if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 4)) {
+    if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
       pages.push(i);
     }
   }

@@ -4,7 +4,7 @@ import { To } from 'react-router-dom';
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   version: 'unfilled' | 'filled' | 'outline' | 'custom' | 'pagination_pn' | 'pagination';
-  label: string;
+  label?: string;
   icon?: ReactNode;
   disabled?: boolean;
   tag?: 'link' | 'button';

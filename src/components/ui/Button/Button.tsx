@@ -25,7 +25,7 @@ export const Button = ({
   return tag === 'button' ? (
     <button className={buttonClassNames} onClick={onClick} disabled={disabled}>
       {icon && <span className={styles.icon}>{icon}</span>}
-      <span className={styles.label}>{label}</span>
+      {label && <span className={styles.label}>{label}</span>}
     </button>
   ) : (
     <Link to={href ?? ''} className={buttonClassNames} state={state}>

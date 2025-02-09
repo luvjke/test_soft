@@ -1,7 +1,7 @@
 @import '../../../scss/mixins//text.scss';
 
 .item_box{
-    background-color: red;
+    background-color: $black-background;
     overflow: hidden;
     position: relative;
    
@@ -13,14 +13,20 @@
     }
 
     .content_box{
+        aspect-ratio:12/4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 16px 16px;
+        @include textRegular-14();
+
         .title{
-            margin: 10px 16px 16px;
-            @include textRegular-14();
+            text-overflow: ellipsis;
         }
+  
     
         .content{
-            padding: 10px 16px;
-    
+
             @media (min-width: 768px) {
                 padding: 5px 0;
               }

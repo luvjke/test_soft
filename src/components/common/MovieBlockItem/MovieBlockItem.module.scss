@@ -1,3 +1,36 @@
+@import '../../../scss/mixins/text.scss';
+@import '../../../scss/variables.scss';
+
 .container{
     position: relative;
+
+
+}
+
+.description_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      }
+
+}
+
+
+.description_info{
+    color:$block-background;
+    display: flex;
+    gap: 10px;
+    opacity: 0.8;
+
+    .type{
+        color:$block-background;
+    }
+
+    .year{
+        color:$block-background;
+    }
+
 }
