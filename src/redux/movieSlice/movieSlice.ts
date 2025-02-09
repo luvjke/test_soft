@@ -6,7 +6,7 @@ import { fetchMovieAsync, fetchMoviesAsync } from './asyncAction';
 const initialState: MovieState = {
   movies: [],
   currentMovie: null,
-  searchTerm: 'Star Wars',
+  searchTerm: '',
   status: 'completed',
   totalResults: 0,
 };

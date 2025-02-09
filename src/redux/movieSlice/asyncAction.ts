@@ -8,7 +8,7 @@ const apikey = 'fe0ee043';
 export const fetchMoviesAsync = createAsyncThunk(
   'fetchMovies',
   async ({ searchTerm, page }: { searchTerm: string; page: number }): Promise<SearchResult> => {
-    const query = `http://www.omdbapi.com/?apikey=${apikey}&s=${searchTerm}&page=${page}`;
+    const query = `https://www.omdbapi.com/?apikey=${apikey}&s=${searchTerm}&page=${page}`;
 
     try {
       const response = await axios.get(query);
@@ -22,7 +22,7 @@ export const fetchMoviesAsync = createAsyncThunk(
 export const fetchMovieAsync = createAsyncThunk(
   'fetchMovie',
   async (imdbID: string): Promise<Movie> => {
-    const query = `http://www.omdbapi.com/?apikey=${apikey}&i=${imdbID}&plot=full`;
+    const query = `https://www.omdbapi.com/?apikey=${apikey}&i=${imdbID}&plot=full`;
 
     try {
       const response = await axios.get(query);

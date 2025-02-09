@@ -40,7 +40,7 @@ export const MovieBlockItem = ({ movie }: MovieItem) => {
             version={'filled'}
             label={''}
             onClick={handleAddFavorite}
-            icon={isFavorited ? <HearhPlus /> : <HearhMinus />}
+            icon={isFavorited ? <HearhMinus /> : <HearhPlus />}
           />
         </div>
       </div>

@@ -35,11 +35,13 @@ export const Home = () => {
   return (
     <>
       <SearchBar onSetSearch={handleUpdateSearch} />
-      <Pagination
-        currentPage={currentPage}
-        totalPages={Math.ceil(totalResults / 10)}
-        onPageChange={(page) => handlePageChange(page)}
-      />
+      {totalResults > 0 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={Math.ceil(totalResults / 10)}
+          onPageChange={(page) => handlePageChange(page)}
+        />
+      )}
       <MovieBlock movies={movies} searchTerm={searchTerm} />
     </>
   );
