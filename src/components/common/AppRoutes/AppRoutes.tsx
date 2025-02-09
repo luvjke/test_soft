@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { MoviePage } from 'src/pages/MoviePage';
 
 import { Home } from '../../../pages/Home';
 import { RoutesMap } from '../../../common/constans';
@@ -9,6 +10,8 @@ export const AppRouter = () => {
     <>
       <Routes>
         <Route path={RoutesMap.MAIN} element={<Home />} />
+        <Route path={RoutesMap.Movie} element={<MoviePage />} />
+        <Route path={RoutesMap.NotFound} element={<h1>Page Not Found</h1>} />
       </Routes>
     </>
   );

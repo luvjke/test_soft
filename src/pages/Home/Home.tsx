@@ -30,6 +30,7 @@ export const Home = () => {
   }
   const handleUpdateSearch = (value: { search: string }) => {
     dispatch(updateSearchTitle(value.search));
+    setCurrentPage(1);
   };
   return (
     <>

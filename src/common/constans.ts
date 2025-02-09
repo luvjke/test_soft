@@ -1,5 +1,7 @@
 export const RoutesMap = {
   MAIN: '/',
+  NotFound: '*',
+  Movie: `/movie/:id`,
 };
 
 export const apiMap = {
