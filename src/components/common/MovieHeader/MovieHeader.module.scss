@@ -1,0 +1,24 @@
+
+      .content_box{ 
+          border-top-left-radius: 12px;
+          border-top-right-radius: 12px;
+          padding: 24px; 
+          
+          .title{
+            font-size: 30px;
+          }
+
+          .content{
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-bottom: 16px;
+            margin-top: 16px;
+
+            @media (min-width: 768px) {
+              display: flex;
+              gap: 8px;
+            }
+          }
+      }
+  

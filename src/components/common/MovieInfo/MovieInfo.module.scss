@@ -1,0 +1,16 @@
+.container{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .detail{
+        grid-column: span 2 / span 2; 
+    }
+
+    .content{
+        grid-column: span 5 / span 5; 
+    }
+}

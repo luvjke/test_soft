@@ -2,6 +2,8 @@ import React from 'react';
 
 import { MovieDetailsProps } from './MovieDetails.props';
 import styles from './MovieDetails.module.scss';
+import { MovieHeader } from '../MovieHeader';
+import { MovieInfo } from '../MovieInfo';
 export const MovieDetails = ({ movie }: MovieDetailsProps) => {
   return (
     <div className={styles.container}>
@@ -10,15 +12,14 @@ export const MovieDetails = ({ movie }: MovieDetailsProps) => {
           <img src={movie.Poster} alt={movie.Title} className={styles.image} />
         </div>
         <div className={styles.descrip_content}>
-          <div className={styles.content_box}>
-            <h1 className={styles.title}>{movie.Title}</h1>
-            <div className={styles.content}>
-              <span>{movie.Type}</span>
-              <span>{movie.imdbRating}</span>
-              <span>{movie.Year}</span>
-              <span>{movie.Runtime}</span>
-            </div>
-          </div>
+          <MovieHeader
+            title={movie.Title}
+            year={movie.Year}
+            type={movie.Type}
+            runtime={movie.Runtime}
+            rating={movie.imdbRating}
+          />
+          <MovieInfo movie={movie} />
         </div>
       </div>
     </div>
