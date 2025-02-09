@@ -1,10 +1,14 @@
+.container{
+    z-index: -4;
+}
+
 .movie_box{ 
     height: 100vh; 
     left: 0;
     position: relative; 
     top: 0;
     width: 100%; 
-    z-index: -1;
+  
 
     .image{ 
     filter: blur(8px); 
@@ -13,6 +17,7 @@
     opacity: 0.5; 
     position: fixed; 
     top: 0; 
-    width: 100%
+    width: 100%;
+    z-index: -1;
     }
 }

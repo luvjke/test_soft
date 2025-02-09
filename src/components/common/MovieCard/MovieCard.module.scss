@@ -21,7 +21,9 @@
         @include textRegular-14();
 
         .title{
+            overflow: hidden;        
             text-overflow: ellipsis;
+            white-space: nowrap;
         }
   
     

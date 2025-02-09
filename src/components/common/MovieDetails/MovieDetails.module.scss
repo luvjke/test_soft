@@ -31,7 +31,12 @@
 
          .descrip_content {
           margin-top: 20px;
-      
+
+          .plot{
+            font-style: italic;
+            padding: 0 24px;
+            
+          }
           @media (min-width: 768px) {
             margin-top: 0;
             padding-left: 20px;

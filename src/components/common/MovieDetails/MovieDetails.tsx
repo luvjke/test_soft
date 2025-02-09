@@ -20,6 +20,7 @@ export const MovieDetails = ({ movie }: MovieDetailsProps) => {
             rating={movie.imdbRating}
           />
           <MovieInfo movie={movie} />
+          {movie.Plot && <div className={styles.plot}>{movie.Plot}</div>}
         </div>
       </div>
     </div>

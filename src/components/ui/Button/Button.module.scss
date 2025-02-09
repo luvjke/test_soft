@@ -52,6 +52,21 @@
   padding: 7px; 
 }
 
+.unfilled{
+  background-color: none;
+  border: 1px solid $block-background;
+  padding: 10px;
+
+  &:hover {
+    background-color: $block-background;
+  }
+}
+
+.outline{
+  background-color: $black-background;
+  padding: 10px;
+}
+
 .filled{
   background-color: $active-form;
   border-radius: 15px;

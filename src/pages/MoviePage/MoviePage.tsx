@@ -34,7 +34,7 @@ export const MoviePage = () => {
   };
   return (
     <div className={styles.container}>
-      <Button version={'unfilled'} label={'Back to search'} onClick={handleBack} />
+      <Button version={'outline'} label={'Back to search'} onClick={handleBack} />
       {movie && (
         <>
           <div className={styles.movie_box}>

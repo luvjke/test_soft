@@ -10,7 +10,7 @@ export const MovieCard = ({ poster, title, link, children }: MovieCardProps) => 
         <div className={styles.image_box}>
           <Link to={link}>
             <img
-              src={poster !== 'N/A' ? poster : 'Вставь изображение'}
+              src={poster !== 'N/A' ? poster : 'https://placehold.co/200x300?text=No+Image'}
               alt={title}
               className={styles.image}
             />
